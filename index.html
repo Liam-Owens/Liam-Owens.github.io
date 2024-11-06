@@ -82,41 +82,33 @@
     }
 
     function calculateExtendedTime() {
-      // Get start time, exam duration
       let startTime = document.getElementById("start-time").value;
       let hours = parseInt(document.getElementById("exam-hours").value) || 0;
       let minutes = parseInt(document.getElementById("exam-minutes").value) || 0;
 
-      // Calculate total exam duration in minutes and extended time
       let totalMinutes = hours * 60 + minutes;
       let extendedMinutes = totalMinutes * selectedExtension;
 
-      // Calculate extended time in hours and minutes
       let extendedHours = Math.floor(extendedMinutes / 60);
       let extendedRemainingMinutes = extendedMinutes % 60;
 
-      // Calculate extended end time
       let [startHours, startMinutes] = startTime.split(":").map(Number);
       let startDate = new Date();
       startDate.setHours(startHours, startMinutes);
       startDate.setMinutes(startDate.getMinutes() + extendedMinutes);
 
-      // Format extended end time with AM/PM
       let endHours = startDate.getHours();
       let endMinutes = startDate.getMinutes().toString().padStart(2, '0');
       let amPm = endHours >= 12 ? 'PM' : 'AM';
       endHours = endHours % 12 || 12;
       let endTimeFormatted = `${endHours}:${endMinutes} ${amPm}`;
 
-      // Display result with selected extension type
       document.getElementById("result").innerText = 
         `Extended Exam Time (${selectedExtension}x): ${extendedHours} hours and ${extendedRemainingMinutes} minutes. Ends at ${endTimeFormatted}`;
 
-      // Set default exam course start time and leave end time blank
       document.getElementById("course-start-1").value = startTime;
       document.getElementById("course-end-1").value = "";
 
-      // Show conflict checker
       document.getElementById("conflict-checker").style.display = "block";
     }
 
@@ -140,7 +132,6 @@
     }
 
     function checkTimeConflict() {
-      // Get calculated extended exam end time
       let resultText = document.getElementById("result").innerText;
       let endTimeMatch = resultText.match(/\d{1,2}:\d{2} (AM|PM)$/);
       if (!endTimeMatch) return;
@@ -152,19 +143,16 @@
       let extendedEndDate = new Date();
       extendedEndDate.setHours(endHours, endMinutes);
 
-      // Office hours
       const officeOpen = new Date();
       officeOpen.setHours(9, 0);
       const officeClose = new Date();
       officeClose.setHours(19, 0);
 
-      // Check if end time is within office hours
       if (extendedEndDate < officeOpen || extendedEndDate > officeClose) {
         alert("Warning: The extended exam time is outside of office hours.");
         return;
       }
 
-      // Check for conflicts in the course schedule
       const courses = document.querySelectorAll(".course");
       let conflictFound = false;
       let suggestedStartTime = null;
@@ -182,18 +170,18 @@
           const courseEndDate = new Date();
           courseEndDate.setHours(courseEndHours, courseEndMinutes);
 
-          // Add 10 minutes walking time to the exam end time for checking overlap
           const walkingBufferEnd = new Date(extendedEndDate);
           walkingBufferEnd.setMinutes(walkingBufferEnd.getMinutes() + 10);
 
-          // Check if there's a conflict
           if (
-            (extendedEndDate >= courseStartDate && extendedEndDate <= courseEndDate) || 
-            (walkingBufferEnd >= courseStartDate && walkingBufferEnd <= courseEndDate)
+            (courseStartDate <= extendedEndDate && courseEndDate >= extendedEndDate) ||
+            (walkingBufferEnd >= courseStartDate && walkingBufferEnd <= courseEndDate) ||
+            (courseStartDate <= walkingBufferEnd && courseEndDate >= walkingBufferEnd) ||
+            (courseStartDate <= extendedEndDate && courseEndDate >= extendedEndDate)
           ) {
             conflictFound = true;
             suggestedStartTime = new Date(courseStartDate);
-            suggestedStartTime.setMinutes(suggestedStartTime.getMinutes() - extendedEndDate.getMinutes());
+            suggestedStartTime.setMinutes(suggestedStartTime.getMinutes() - (totalMinutes + 10));
             break;
           }
         }
@@ -287,7 +275,6 @@
       </div>
     </div>
   </main>
-
 
   <!-- Footer -->
   <footer class="text-center text-lg-start mt-auto">
