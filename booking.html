@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book an Appointment | Estetiquette</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/fav.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/fav.png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom Theme CSS -->
+  <link href="estetiquette-theme.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Logo2x.png" alt="Estetiquette Logo" style="height: 50px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-bold" href="booking.html">Book Appointment</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+<div class="container-fluid my-5" style="height: 100vh;">
+  <div class="row h-100 align-items-center">
+    <!-- Left Side Google Calendar (70% Width) -->
+    <div class="col-md-9 d-flex flex-column justify-content-center p-5" style="background-color: rgba(45, 132, 100, 0.1);">
+      <h1 class="fw-bold text-center" style="color: #2d8464;">Book an Appointment</h1>
+      <p class="fs-5 text-center">
+        Ready to take the next step toward radiant, healthy skin? Book your appointment today! 
+        Our simple and convenient online booking system makes it easy for you to reserve your spot.
+      </p>
+      <!-- Google Calendar Appointment Scheduling -->
+      <div class="mt-4 p-3 mx-auto" style="background-color: rgba(45, 132, 100, 0.2); border-radius: 8px; height: 80vh; width: 100%;">
+        <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0C87bTDOAaSaZf_taB8rQestSKEmLa20Bw_hkpZEba6fSKguCbHQeAsvA4YAewHMJZWqaIe--c?gv=true" 
+          style="border: 0; width: 100%; height: 100%;" frameborder="0">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Right Side Image (30% Width) -->
+    <div class="col-md-3 p-0">
+      <img src="images/Contact.jpg" alt="Booking Image" class="img-fluid w-100 h-100" style="object-fit: cover; height: 100%;">
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="text-center text-white py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1 -->
+        <div class="col-md-4">
+          <img src="images/LogoWhite.png" alt="Logo" style="max-width: 100px;">
+          <p>For appointments please text or call</p>
+          <h4>516-312-3888</h4>
+          <a href="booking.html" class="btn btn-primary btn-lg mt-2">
+            <i class="bi bi-calendar-check-fill"></i> Book Online
+          </a>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-md-4">
+          <h5>Business Hours</h5>
+          <ul class="list-unstyled">
+            <li>Monday: Closed</li>
+            <li>Tuesday: Closed</li>
+            <li>Wednesday: 9 AM – 2 PM</li>
+            <li>Thursday: 9 AM – 8 PM</li>
+            <li>Friday: 9 AM – 8 PM</li>
+            <li>Saturday: 10 AM – 5 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-md-4">
+          <h5>Address</h5>
+          <p>109 7th St, Garden City, NY 11530</p>
+          <a href="https://www.google.com/maps?q=109+7th+Street+Garden+City,+NY+11530" class="btn btn-secondary btn-lg mt-2">
+            <i class="bi bi-geo-alt-fill"></i> Get Directions
+          </a>
+        </div>
+      </div>
+
+      <hr class="footer-divider">
+
+      <!-- Social Media Links -->
+      <div class="text-center">
+        <p>Follow Us</p>
+        <a href="https://www.facebook.com/Estetiquette-Love-Heal-Your-Skin-by-Alexandra-358540231365441/" class="btn btn-social me-2">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/estetiquette/" class="btn btn-social me-2">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://wa.me/15163123888" class="btn btn-social me-2">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+
+:root {
+  --bs-primary: #2d8464; /* Green */
+  --bs-secondary: #642d84; /* Purple */
+  --bs-warning: #84642d; /* Gold (Accent) */
+}
+
+/* Navbar */
+.navbar-dark {
+  background-color: var(--bs-secondary) !important;
+}
+
+/* Right Panel */
+.right-banner {
+  background-color: var(--bs-primary) !important; /* Solid Green Background */
+  color: #ffffff; /* White text for contrast */
+}
+
+.right-banner h2,
+.right-banner p {
+  color: #ffffff; /* Ensure all text is readable */
+}
+
+.right-banner a {
+  background-color: #84642d; /* Gold buttons for contrast */
+  border-color: #84642d;
+  color: #ffffff; /* White text */
+}
+
+.right-banner a:hover {
+  background-color: #6f5124; /* Darker gold for hover effect */
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, var(--bs-primary), var(--bs-secondary)) !important;
+}
+
+footer a {
+  color: white !important;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--bs-warning) !important;
+}
+
+/* Social Media Buttons - Themed Colors */
+footer a.btn-social {
+  background-color: var(--bs-primary) !important; /* Green theme by default */
+  border-color: var(--bs-primary) !important;
+  color: white !important;
+}
+
+footer a.btn-social:hover {
+  background-color: var(--bs-warning) !important; /* Gold theme on hover */
+  border-color: var(--bs-warning) !important;
+  color: white !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: #237655 !important;
+}
+
+.btn-secondary {
+  background-color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
+  color: white !important;
+}
+
+.btn-secondary:hover {
+  background-color: #502472 !important;
+}
+
+.btn-warning {
+  background-color: var(--bs-warning) !important;
+  border-color: var(--bs-warning) !important;
+  color: white !important;
+}
+
+.btn-warning:hover {
+  background-color: #6f5124 !important;
+}
+
+/* Optional Accent Button */
+.btn-accent {
+  background-color: var(--bs-warning);
+  border-color: var(--bs-warning);
+  color: white;
+}
+
+.btn-accent:hover {
+  background-color: #6f5124;
+}
+/* Service Section Styling */
+.services-section h1,
+.services-section h2 {
+  color: var(--bs-primary); /* Green for headings */
+}
+
+.services-section table {
+  border-color: var(--bs-primary) !important; /* Table borders match theme */
+}
+
+.services-section table thead {
+  background-color: var(--bs-secondary) !important; /* Purple header for tables */
+  color: white !important; /* White text for contrast */
+}
+
+.services-section table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light alternate row color for readability */
+}
+
+.services-section table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White rows */
+}
+
+.services-section table tbody tr:hover {
+  background-color: #eaf4f1; /* Light green for hover effect */
+}
+
+/* Price Column Styling */
+.services-section table tbody td:last-child {
+  text-align: right; /* Align prices to the right for clarity */
+  font-weight: bold; /* Make prices bold */
+  color: var(--bs-warning); /* Gold for prices */
+}
+
+/* Service Section Padding */
+.services-section {
+  padding: 40px 0;
+}
+
+.services-section h1,
+.services-section h2 {
+  color: var(--bs-primary); /* Green headings */
+}
+
+.services-section table {
+  border-color: var(--bs-primary) !important;
+  margin-bottom: 20px; /* Space between tables */
+}
+
+.services-section table thead {
+  background-color: var(--bs-secondary) !important; /* Purple header */
+  color: white !important; /* White text */
+}
+
+.services-section table tbody tr:nth-child(even) {
+  background-color: rgba(45, 132, 100, 0.1); /* Transparent green for even rows */
+}
+
+.services-section table tbody tr:nth-child(odd) {
+  background-color: white; /* White for odd rows */
+}
+
+.services-section table tbody tr:hover {
+  background-color: rgba(45, 132, 100, 0.2); /* Slightly darker transparent green on hover */
+}
+
+/* Right-align prices and make them bold */
+.services-section table td:last-child {
+  text-align: right;
+  font-weight: bold;
+  color: var(--bs-warning); /* Gold prices */
+}
+
+/* Equal Heights for Columns */
+.services-section .row > .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Example referencing favicon in CSS */
+header {
+  background-image: url('images/fav.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
