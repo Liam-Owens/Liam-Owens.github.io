@@ -45,26 +45,19 @@
   </nav>
 
   
-<div class="container-fluid my-5" style="height: 100vh;">
+<div class="container-fluid my-5" style="height: calc(100vh - 80px);"> <!-- Full viewport minus navbar -->
   <div class="row h-100 align-items-center">
-    <!-- Left Side Google Calendar (70% Width) -->
-    <div class="col-md-9 d-flex flex-column justify-content-center p-5" style="background-color: rgba(45, 132, 100, 0.1);">
+    <!-- Full-Width Google Calendar -->
+    <div class="col-12 d-flex flex-column justify-content-center">
       <h1 class="fw-bold text-center" style="color: #2d8464;">Book an Appointment</h1>
       <p class="fs-5 text-center">
         Ready to take the next step toward radiant, healthy skin? Book your appointment today! 
         Our simple and convenient online booking system makes it easy for you to reserve your spot.
       </p>
       <!-- Google Calendar Appointment Scheduling -->
-      <div class="mt-4 p-3 mx-auto" style="background-color: rgba(45, 132, 100, 0.2); border-radius: 8px; height: 80vh; width: 100%;">
-        <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0C87bTDOAaSaZf_taB8rQestSKEmLa20Bw_hkpZEba6fSKguCbHQeAsvA4YAewHMJZWqaIe--c?gv=true" 
-          style="border: 0; width: 100%; height: 100%;" frameborder="0">
-        </iframe>
-      </div>
-    </div>
-
-    <!-- Right Side Image (30% Width) -->
-    <div class="col-md-3 p-0">
-      <img src="images/Contact.jpg" alt="Booking Image" class="img-fluid w-100 h-100" style="object-fit: cover; height: 100%;">
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0C87bTDOAaSaZf_taB8rQestSKEmLa20Bw_hkpZEba6fSKguCbHQeAsvA4YAewHMJZWqaIe--c?gv=true" 
+        style="border: 0; width: 100%; height: calc(100vh - 200px);" frameborder="0">
+      </iframe>
     </div>
   </div>
 </div>
