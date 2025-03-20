@@ -1,0 +1,62 @@
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+.header {
+    background-color: #13579A;
+    padding: 10px;
+    text-align: center;
+}
+.header a {
+    color: #FDC82F;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.header a:hover, .header a.active {
+    text-decoration: underline;
+    background-color: #FDC82F;
+    color: #13579A;
+    padding: 5px;
+    border-radius: 4px;
+}
+.container {
+    margin-top: 20px;
+}
+button {
+    padding: 10px 15px;
+    background-color: #13579A;
+    color: #FDC82F;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+button:hover {
+    background-color: #FDC82F;
+    color: #13579A;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+table th {
+    background-color: #35C4B5;
+    color: #fff;
+}
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+table tr:hover {
+    background-color: #e0f7fa;
+}
+</style>
